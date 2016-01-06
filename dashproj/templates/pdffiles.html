@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+<script src='/static/scripts/index.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.28/angular-cookies.js
+'></script>
+
+
+<style type="text/css">
+.login_div{
+	    width: 300px;
+    padding: 50px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    background-color: #D2D1D1;
+}
+</style>
+<body>
+	{% csrf_token %}
+{%verbatim%}
+<div ng-app="myapp">
+	<div class="login_div" ng-controller="login">
+		<div style="width: 100px;margin: 0 auto;font-size: 19px;padding-bottom: 10px;" ng-init="get_files();">
+		Shared Files</div>
+		<div ng-repeat="file in file_names"><span ng-click="show_pdf(file);">{{file}}</span></div>
+		<div>{{pdf_file}}</div>
+		
+	</div>
+ 	
+ 	<!-- <h1>Hello {{name}}</h1> -->
+</div>
+{%endverbatim%}
+
+</body>
+</html>
