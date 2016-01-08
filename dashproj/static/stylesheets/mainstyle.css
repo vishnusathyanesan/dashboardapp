@@ -1,0 +1,314 @@
+<style type="text/css">
+body {
+    background: #E8E8E8 !important;
+}
+
+.fa {
+    cursor: pointer;
+    color:#F48A00 !important;
+}
+
+#map {
+    width: 100%;
+    height: 250px;
+}
+
+th {
+    text-align: center !important;
+}
+.appBusy {
+    background: #FFF1A8 -webkit-gradient(linear, left top, left bottom, from(#FFE090), to(#FFF2B0));
+    background-color: #FFF1A8;
+    color: black;
+    left: 45%;
+    padding: 3px 6px;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    border-radius: 0 0 5px 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -3px 5px, rgba(0, 0, 0, 0.246094) 0px 3px 5px;
+    margin: auto;
+    display: inline-block;
+}
+
+textarea {
+    width: 175px;
+}
+
+select {
+    width: 175px;
+}
+
+table {
+    border: none;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background: white;
+}
+
+.tablediv {
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+thead {
+    background: #F48A00;
+    color: white;
+}
+
+td,
+th {
+    height: 30px;
+    border-right: 1px solid #F79D06;
+    border-left: 0px;
+    text-align: center;
+}
+
+th:last-child,
+td:last-child {
+    border-right: 0px solid #F79D06;
+}
+
+tbody {
+    color: #2c2c2c;
+}
+
+.nav-tabs {
+    background: #F48A00;
+}
+
+ul>li>a {
+    color: white !important;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    color: #F48A00 !important;
+}
+
+.nav-tabs>li>a:hover {
+    color: #F48A00 !important;
+    background: white;
+}
+
+.dropdown-menu>li>a {
+    color: #F48A00 !important;
+    border-bottom: 1px solid #F48A00;
+    font-size: 20px;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+    color: white !important;
+    background: #F48A00 !important;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover{
+    color: white !important;
+    background: #F48A00 !important;
+}
+.logout {
+    float: right;
+    position: relative;
+    top: 10px;
+    background-image: url('/static/images/Logout.png');
+    width: 100px;
+    height: 40px;
+    background-size: 30px;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.logoutlink {
+    position: relative;
+    left: 35px;
+    top: 3px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.subsdiv {
+    position: fixed;
+    left: 0;
+    width: 185px;
+}
+
+.subsdiv>div {
+    background-image: url('/static/images/label.png');
+    background-repeat: no-repeat;
+    background-size: 180px;
+    font-size: 20px;
+    color: white;
+    height: 39px;
+    position: relative;
+    top: 76px;
+    line-height: 40px;
+    padding-left: 20%;
+}
+
+.addedit {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 70px;
+    background: white;
+}
+
+.heading_login {
+    text-align: left;
+    padding-left: 15px;
+}
+
+select,input[type=email],input[type=text],input[type=number] {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #F48A00;
+    background: #E8E8E8;
+        width: 230px;
+}
+select{
+    background-image: url('/static/images/dropdown-ash.png');
+        -webkit-appearance: none;
+        -moz-appearance:none;
+    background-size: 28px;
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 4px;
+    cursor: pointer;
+    background-position: 100%;
+}
+.dateicon{
+    background-image: url('/static/images/calander.png');
+    background-size: 29px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    right:30px;
+}
+.labelcust {
+    display: inline-block;
+    float: left;
+    color: #fa6e1a;
+    font-weight: bold;
+    font-size: 16px;
+}
+textarea{
+    height: 100px;
+    border: 1px solid #F48A00;
+    background: #E8E8E8;
+        width: 230px;
+}
+input[type=checkbox]{
+    float: right;
+    width: 40%;
+    position: relative;
+    top: 10px;
+}
+textarea {
+    resize: none;
+}
+
+/*on off switch*/
+.onoffswitch {
+    position: relative; width: 70px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    float: right;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #F48A00; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+        background-color: #F48A00; color:white;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+        background-color: #F48A00; color: white;
+    text-align: right;
+}
+.onoffswitch-switch {
+       display: block;
+    width: 25px;
+    margin: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 4px;
+    right: 38px;
+    border: 2px solid #F48A00;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+/*end*/
+.buttonscust{
+      width: 75px;
+    display: inline-block;
+    text-align: center;
+    height: 26px;
+    line-height: 26px;
+    background: #F48A00;
+    color: white;
+    cursor: pointer;
+    border: 0;
+}
+.buttonscust:focus {
+    outline: 0;
+}
+.nav-tabs>li>a {
+    height: 50px;
+    font-size: 20px;
+    border-radius: 0px;
+    font-weight: bold;
+}
+tags-input .tags .tag-item{
+    background: #D0D0D0;
+}
+tags-input .tags .tag-item .remove-button{
+        color: white;
+    border-radius: 15px;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #F48A00;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 15px;
+    padding-left: 2px;
+    background: #F48A00;
+    font-weight: normal;
+}
+.dropdown-menu{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+</style>

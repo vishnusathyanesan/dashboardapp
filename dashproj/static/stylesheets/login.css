@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'SansationRegular';
+  src: url('/static/stylesheets/fonts/SansationRegular.eot'); /* IE9 Compat Modes */
+  src: url('/static/stylesheets/fonts/SansationRegular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/static/stylesheets/fonts/SansationRegular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/static/stylesheets/fonts/SansationRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/static/stylesheets/fonts/SansationRegular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+body{
+    background-image: url('/static/images/Background.png');
+    font-family: 'SansationRegular' !important;
+    margin: 0;
+    background-size: 100% 215%;
+    background-repeat: no-repeat;
+}
+input{
+    width: 100%;
+}
+.logoApp{
+    background-image: url('/static/images/131.png');
+    /* height: 24px; */
+    background-repeat: no-repeat;
+    background-size: 241px;
+    height: 100px;
+    width: 240px;
+    margin: 0 auto;
+    position: relative;
+    top: 90px;
+}
+.error_login {
+    margin-left: 125px;
+    display: inline-block;
+    height: 20px;
+    color: red;
+    font-size: 12px;
+    position: relative;
+}
+
+.main_logindiv {
+        width: 340px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 158px;
+        height: 300px;
+}
+
+.username {
+    padding-bottom: 10px;
+       
+}
+.username>input {
+    width: 90%;
+    height: 26px;
+    border: 0;
+    background: none;
+    border-bottom: 1px solid #faa61a;
+    color: black !important;
+    font-size: 16px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAE1UlEQVR4Xu1bTXJaRxDuftZ7MmxMFqkCNlZOEHICoRMELQ0LWycQPkHICYJPIGkBXoJPIHwCkRNY3oCqvMjTBqyH8jo180BFsGT19MwAqUhVbFT9M/1NT/dMdz+ENf3R++LejGCfAGsIUADCAiBUtHqCISDFBBAjUD9E+Iivri7XsTT0rSTpFl8DBc07Y7kKNShpO6pfnXFZJHTeAFCGE2ALAfckC1vwENAlArV8AeEcAOoVCrNprgeAVRvDv+WlQZibHuJhHLuU6xSApPNjBSA8B4SCy0X+yxvo9jBqfBm6ku8MgNtuuZYSnPgy/s5ggjhAONqpj/ouQHACgO+d/8ZQghhgduDCE6wBUGc+meYubIOd6W6q4Bjlpr/YxgRrAJJu6dx9wOPCQYOoPj7gUt9HZwXA7H2xShSc2yzAlhcxPQhfXQ2kcqwASDrlC+MLjnSlD/LZeYEYgKRTfAMYnDi3RyKQ0qOocXUqYZUD0C0rha8lSj3wnEX10RuJXDkAnfJf3nM+1yKCOGqMfuCSL9OJANCXHoCeRKEvngDgUHI5EgFw0ym3EOE3X8ZI5BLB77uNUcuUVwRA0i21AfDYVJlP+nUDMADAfZ8Gmcumj1F9bPwClXrAEwD/aw+46ZT6iPiruZv64yCiD7uNcc1Ug+gIPGWBbqkJgH+You2Xnt5G9XHbVIfIA3QBBMMLU2U+6UNMf5KU0kUAKENuOqVLRHzp0yiubCL6vNsYi6rPYgC26zJE76L6uMkFzPotoARknZ7gk0Spax6p+6t1iD1AMSfb8SQWP4WtAZh7garRv3C9q0x51yGmFUnwW8i38oAsGG7yZShLfU5iwLKQDR0FK9d35gE6IOp+YF5VZn9muq4t2Z9hblK17QlYx4BlK9YIgjPjnQKwAMPzcXDi9s5jwKo/J9lbQZWnXGWHa9AzAuZ3/cfOmnUWeEiB7hlO8k1EUDc0KRDXRNCO8pO2i/N+31q9AbBQlt0VsEYEVW4NQb3tEWEQIvVtcvxju+8lBnxPqfKK26/PK0SofgVE0oMURBgjkvoNd55/Hfra7Y14AGcXNknj/Qhs0jiO7icAOCi5oFFVJMRnL5CCAgXzAckVwZjCkDCNdxA++w5+Tq/C9wE06xb3AYMqEVWBsGLcSCWICWkQIA4pnX1wMQ/kPQjOU94xAdRczwzpgUmCdpifnrnMEk5iwNzwk7XNChGchvnJWxdAWAGQ5fX8MREYd2Wt44oelaNW1Bi/s5ElBkAFNcKdnmtXNzaGYBjmJwdSbxABsPbByEdQyeKDbITWGAA9GpcGPeOobry1hgzC6VEjAHTRY5L/tHXG3728zI+DEQCbnQplegTBadQYHTGp+X2BbRyMeshIk+lRtgds40zAd3aZXTpjAbBNbTCua3PbZSwAtmEommv43SOHOUTNAmCz3R9T0zN67tjcEwAcfP9LGWBhD3d0luUBSqjnhgdnH0xo3GYBfaay7wFb2zYiu4oK9+yLK0LzjKCmsdbVCGXtvO4lwG3LtHLEPgKrq1BApCk2EfUXotLOD8u4h4jUcBQi9EOktrSGKAZgeVFZkCQFRMXnCO3cYPVVuTLaSdfICQCrO6TqBQGGe39TVv1F1ODM/1D9716PWTJQcV0Sgf6EPgjSga+O0T8OxB9fc1+ytAAAAABJRU5ErkJggg==');
+    background-repeat: no-repeat;
+    background-size: 23px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+}
+input:focus{outline:none;}
+.pwd>div,.username>div {
+    margin-left: 180px;
+    display: inline-block;
+    color: red;
+    font-size: 12px;
+    position: absolute;
+}
+.pwd {
+    padding-bottom: 10px;
+       
+}
+
+.login_inner>span{
+       width: 55%;
+       margin: 0 auto;
+       display: block;
+       text-align: center;
+       height: 40px;
+       line-height: 40px;
+       background: #F48A00;
+       color: white;
+       font-size: 20px;
+       cursor: pointer;
+       font-weight: bold;
+}
+.pwd>input {
+   width: 90%;
+    height: 26px;
+    border: 0;
+    background: none;
+    border-bottom: 1px solid #faa61a;
+    color: black !important;
+    font-size: 16px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEoUlEQVR4Xu2bTVbbMBCAZ1xsXtg0XfQ9kk3TExROUDhB2yXOonADOEHTE5QbFBYJS9oTNJyg4QRNN4b3umjYwMPhafpkJ8GJfyRbin9Cs8uLNCN9mtFIMwrCE/+gjvm73ZdbiM+eIxl1hqyOAEMu17SvL3TIX6aMTADobLM1ZviOEHYQ8H3iAAkGgNQHeji12n8Gy5xMFtmpAPgTNz4Bwn4WZUAwQIMdmXvX/Uz9l9BJCgCd1+vj240vmSceGrhnEUdlsAghAO7fAOZXQNjSugAEIwPhYM12vmmVm1JYIoDx2eYOMeMcEOop5Uo3R4SOued8lu6guWEsAG/l0fypWV+MODqy7KvjfHTNa4kEMPH5XwkrfwlAIwDkbvFcx8ANgA9FuEMkALfb/Bnj86cmsg7uXXtxnn88NyGDr94bJRAEI9Ng20HZSvIkO4cAuL3GIQB+WexPBJ/X204nSi63GPe2NkDEV5J641yhb9lXu2oy0vWeA5Bg+peW7SRGgYkl/EinPtwake3meU6YA3DfbXYQ4VM4bLMDq319Ipqc22vyk56aKwDlagXzAHqNXwjYCgMYb8scWtxek0P6KAIl+t1E9jqvvWAGICnsyZrlfbfxDRHfiSYo/j2/sPgIIGbz8wcrN6D7OAsSz3ihBV1Y9tVO6m4ZOgQB9AHwbeQuDzS0anfb+GE0itPx0Gu+ZwDnGcYQ2cWyHeExXYcuKQC+EcCJ1XYOIgH5t0R+dtB2ZC4AQJPERKlvEB6vtZ3vHhPvllj7CIAdnZPnsmX3HfGYk1sELEAGgKo6+f7/AeR0IJpZwH23MVQ/ysqvsKhlARbQiI0CosEu43ezdvsiKero0hncA7Sc4jQN7MayHW0RJWlMMwC647gKCCL6vt6+Ss42qygI9J0B8ELa3cZfTXLVxJDc5UtNid974Tao6yyvNLQbs3bbysP/QwB03emVpu+dsAqyAK7b7ZUkGuQEIXThKI0V5GQJ0UnRxKuxsoHHCKALIDoBNL7ONViyJcTXBTRld2RwEdFva+Nui298bndzP08IsQAmYZEXMRVzfBIICEYA491p2i1PCMKkg648nxBDQRCEACaRIbJWIJxU2gYFQJAC4G3IZ5stl+GxnqRnApmcIUgDmA6Zh0nG8BARedIyTV3wciJDvKfkCCE1gODa+Rco4iAmVaNZsfQGgAYAOARifdOAPs/zp9pYc4KgBCCti3uu5F+65KJLDhByB1A2CIUAKBOEwgCUBUKhAMoAoXAARUMoBYAAhGMAmivPE0ErlK7XGB1KAyAupMY/2tBzgaouAM9s1CFUG4AGCNUHoAih9ADinu2F9oyM7lB6AHyi/kboXbp4KWNIBEP/+8KLlkUIUbnNhRxjJQBERQjp6NCLePdAj6/eVg/AZE8wAPaZbyWHiwCD75IrDCB7GS/47LeyAFQqWCsBIHYPkMvSnFq24/3vqbIWMM1WE+HCQwraFz/1eXyIWWkAUYst5xpPHQDByGo7LyrvAtktAGD6EvWJugDMHmGtIIDY/yx4tQoiGCE8dKaF2JUDwN2CF2wImfeyfQ1gmPTni5UEIHcU8Fv9A5+C6V8sZHV1AAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-size: 23px;
+    padding-left: 30px;
+}
+.heading_login{
+        height: 50px;
+    background: #F48A00;
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    color: white;
+}
+.login_inputs{
+    height: 180px;
+    background: white;
+    padding: 10px 35px 10px 35px;
+}
+.login_inner {
+    width: 100%;
+   
+    position: relative;
+    top: 15px;
+}
+
+.buttons{
+        border: 1px solid black;
+    border-radius: 3px;
+    padding-left: 2px;
+    padding-right: 2px;
+    background: gray;
+    color: white;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.disabled{
+    cursor: not-allowed;
+}
+#trapezoid {
+    border-top: 228px solid #D8D5D5;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    height: 0;
+    width: 333px;
+    position: absolute;
+    left: -13px;
+    z-index: -999;
+    top: 23px;
+}
