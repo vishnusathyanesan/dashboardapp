@@ -27,8 +27,9 @@
     background: transparent;
     border: 1px dashed red;
 }
-.headerAlert{
-        height: 30px;
+
+.headerAlert {
+    height: 30px;
     line-height: 30px;
     font-weight: bold;
     border-bottom: 1px solid #AFACAC;
@@ -61,15 +62,29 @@
             </nav>
         </div>
         <div>
-            <i class="fa fa-trash-o" data-ng-click="openDelete();"></i>
             <div id="feed"></div>
             <div class="container" wlg-shapeshift>
-                <div class="single_wl" style="width:500px;height:300px;overflow:scroll;" >
-                    <div class="headerAlert">{{rssfeds.title}}</div>
-                    <div ng-repeat="feed in rssfeds.entries" style="    padding: 5px;">
-                        <b><div dynamic="feed.title"></div></b>
-                        <div>{{feed.published}}</div>
-                        <span>{{feed.summary}}</span>
+                <div class="single_wl" style="width:500px;height:300px;">
+                    <div class="headerAlert">{{rssfeds.title}}<i class="fa fa-cog" data-ng-click="openDelete();" style="float: right;padding-right: 10px;position: relative;top: 5px;cursor:pointer;"></i></div>
+                    <div style="width:500px;height:300px;overflow:scroll;">
+                        
+                        <div ng-repeat="feed in rssfeds.entries" style="    padding: 5px;">
+                            <b><div dynamic="feed.title"></div></b>
+                            <div>{{feed.published}}</div>
+                            <span>{{feed.summary}}</span>
+                        </div>
+                    </div>
+                    <!-- {{feed}} -->
+                </div>
+                 <div class="single_wl drag-2" style="width:500px;height:300px;">
+                    <div class="headerAlert">laksjflskdj<i class="fa fa-cog" data-ng-click="openDelete();" style="float: right;padding-right: 10px;position: relative;top: 5px;cursor:pointer;"></i></div>
+                    <div style="width:500px;height:300px;overflow:scroll;">
+                        
+                        <div ng-repeat="feed in rssfeds.entries" style="    padding: 5px;">
+                            <b><div dynamic="feed.title"></div></b>
+                            <div>{{feed.published}}</div>
+                            <span>{{feed.summary}}</span>
+                        </div>
                     </div>
                     <!-- {{feed}} -->
                 </div>
@@ -78,10 +93,13 @@
         <!-- <div class="container" ng-view></div> -->
         <script type="text/ng-template" id="DeleteConfirm.html">
             <div class="modal-header" style="text-align: center;">
-                <h3 class="modal-title">Are You Sure Want To Delete</h3>
+                <h3 class="modal-title">Enter Rss Feed Url</h3>
+            </div>
+            <div class="modal-body">
+                <input type="text" ng-model="url" style="width: 100%;" />
             </div>
             <div class="modal-footer" style="text-align: center;">
-                <span class="btn btn-primary" ng-click="yes(iddel);">Yes</span>
+                <span class="btn btn-primary" ng-click="yes(url);">Yes</span>
                 <span class="btn btn-warning" ng-click="no()">No</span>
             </div>
         </script>

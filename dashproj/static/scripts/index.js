@@ -106,25 +106,6 @@
                             });
                         }, 1000);
                     });
-
-                    // $(".watchlist_homepage_cards_container").trigger("ss-rearranged");
-
-                    // $(".watchlist_homepage_cards_container").on("ss-rearranged", function(e, selected) {
-                    //     console.log("PATCH CALL FOR WL REARRANGED.");
-                    //     //  console.log ("This container:", $(this));
-                    //     // console.log ("Has rearranged this item:", $(selected));
-                    //     // console.log ("Into this position:", $(selected).index());
-                    //     $(".watchlist_homepage_cards_container > .single_wl").each(function(){
-                    //         console.log($(this).data("name"));
-                    //         console.log($(this).data("order"));
-                    //         // console.log($(this).index());
-                    //         console.log("---------------------------------------");
-                    //     });
-
-                    // });
-                    // console.log(scope);
-                    // console.log(element);
-                    // console.log(attrs);
                 }
 
             }
@@ -180,7 +161,7 @@
                 var modalInstance = $modal.open({
                     animation: true,
                     templateUrl: 'DeleteConfirm.html',
-                    controller: 'DeleteInstanceCtrl',
+                    controller: 'UrlInstanceCtrl',
                     size: 'sm',
                     resolve: {
                         // locs: function() {
@@ -188,12 +169,17 @@
                         // }
                     }
                 });
-                modalInstance.result.then(function(condition, id) {
+                modalInstance.result.then(function(url, id) {
 
-                }, function(condition) {
-                    // if (condition) {
-                    //     Jobs.Delete(condition);
-                    // }
+                }, function(url) {
+                    console.log(url)
+                    if (url) {
+                        // Jobs.Delete();
+                        $http.get("/check/?url="+url).success(function(data) {
+                            // console.log(data)
+                            $scope.rssfeds = data;
+                        });
+                    }
                     // $log.info('Modal dismissed at: ' + new Date());
                 });
             };
@@ -210,7 +196,16 @@
         })
         .controller('DeleteInstanceCtrl', function($scope, $modalInstance) {
 
-        })
+        }).controller('UrlInstanceCtrl',function($scope,$modalInstance){
+
+            $scope.yes = function(url){
+                // console.log(iddel)
+                $modalInstance.dismiss(url);
+            }
+            $scope.no = function() {
+                $modalInstance.dismiss();
+            };
+        });
 
 
 
